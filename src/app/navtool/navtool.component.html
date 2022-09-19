@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand mr-auto" id="logo" href="#">Cricket.in</a>
+
+  <!-- Links -->
+  <input class="form-control mr-sm-2 inputsize " type="text" placeholder="Search">
+  <button class="btn btn-success btn-lg" id="Search" type="submit">Search</button>
+  <button class="btn btn-success btn-lg" type="button" (click)="scorer($event)">Scorer</button>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link btn btn-secondary ml-5" type="button" href="#">Returns and Orders</a>
+    </li>
+  </ul>
+  <span type="button" (click)="shoppingCart()" class="material-icons text-success ml-5"
+    id="shoppingCartIcon">shopping_cart</span>
+</nav>
+<div class="container-fluid" id="vertical">
+  <div class="row">
+    <div *ngFor="let data of amazonData">
+      <div class="col-sm-4">
+        <h2>Card Image</h2>
+        <p>Image at the top (card-img-top):</p>
+        <div class="card" id="card" style="width:400px">
+          <img class="card-img-top" src="./assets/shawshank.jpeg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <p>{{data.original_title}}</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div id="inputfield" style="width:25em;">
+    <h2 class="text-center text-primary mb-5">Scorer</h2>
+    <form [formGroup]="forms">
+        <div>
+            <b style="font-size:large" class="text-primary">First Name</b> : <input #highlight [(ngModel)]="firstName"
+                id="first-name" class="form-control" type="text" formControlName="firstName" autocomplete="off"
+                [ngClass]="{'invalid-border':form.firstName.invalid && form.firstName.touched}">
+        </div>
+        <span [ngClass]="{'invalid':form.firstName.invalid && form.firstName.touched}"
+            *ngIf="form.firstName.invalid && form.firstName.touched"><i> *The Firstname should not be
+                empty</i></span>
+        <br>
+        <br>
+        <div>
+            <b style="font-size:large" class="text-primary">Password</b> : <input #highlight [(ngModel)]="lastName"
+                id="last-name" class="form-control" type="text" formControlName="lastName" autocomplete="off"
+                [ngClass]="{'invalid-border':form.lastName.invalid && form.lastName.touched}">
+        </div>
+        <span [ngClass]="{'invalid':form.lastName.invalid && form.lastName.touched}"
+            *ngIf="form.lastName.invalid && form.lastName.touched"><i> *The lastName should not be
+                empty</i></span>
+        <div class="text-center mt-5">
+            <button type="button" (click)="submit()" class="btn btn-primary btn-lg submit">submit</button>
+        </div>
+    </form>
+</div>

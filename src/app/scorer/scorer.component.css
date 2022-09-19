@@ -1,0 +1,28 @@
+.scorer {
+    color: green;
+    background-color: white;
+    position: relative;
+    box-shadow: 2px 2px 2px red;
+}
+
+/* .batsman {
+    border-radius: 20px;
+    margin-left: 2em;
+} */
+
+#scoreBroad {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+    align-items: center;
+}
+
+.nav {
+    position: relative;
+    left: 8em;
+    top: 3em;
+}

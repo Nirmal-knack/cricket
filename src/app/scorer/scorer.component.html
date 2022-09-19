@@ -1,0 +1,69 @@
+<div class="text-center scorer">
+    <h1><i>Scorer</i></h1>
+</div>
+<div class="text-right">
+    <button mat-raised-button color="primary" (click)="openModal()">Add batsman Name</button>
+</div>
+<app-model #model (open)="onOpen($event)"></app-model>
+<div class="mt-2">
+    <table class="table col-sm-12 table-bordered table-dark">
+        <thead>
+            <th>Name</th>
+            <th>Run</th>
+            <th>Fours</th>
+            <th>Sixes</th>
+            <th>Balls</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let detail of batsmanDetails">
+                <th scope="row" class="text-success"><i class="text-danger"> * </i>{{detail.striker}}</th>
+                <td>{{detail.run}}</td>
+                <td>{{detail.four}}</td>
+                <td>{{detail.sixes}}</td>
+                <td>{{detail.balls ?? 0}}</td>
+            </tr>
+            <tr *ngFor="let detail of nonFacingBatman">
+                <th class="text-success" scope="row">{{detail.nonStriker}}</th>
+                <td>{{detail.run}}</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>234</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="scoreBroad" class="text-center" *ngIf="batsmanDetails.length > 0">
+    <h1 class="mt-5"><i>ScoreBroad</i></h1>
+    <div>
+        <ul class="nav">
+            <li><a type="button" (click)="runs(1)" class="btn btn-primary">1</a></li>
+            <li><a type="button" (click)="runs(2)" class="btn btn-primary ml-4">2</a></li>
+            <li><a type="button" (click)="runs(3)" class="btn btn-primary ml-4">3</a></li>
+        </ul>
+        <div class="mt-3">
+            <ul class="nav">
+                <li><a type="button" (click)="runs(4)" class="btn btn-success">4</a></li>
+                <li><a type="button" (click)="runs(5)" class="btn btn-primary ml-4">5</a></li>
+                <li><a type="button" (click)="runs(6)" class="btn btn-success ml-4">6</a></li>
+            </ul>
+        </div>
+        <div class="mt-3">
+            <ul class="nav">
+                <li class="btn btn-danger" (click)="runs('NoBall')" type="button">No Ball</li>
+                <li class="btn btn-warning ml-3" (click)="runs('Wide')" type="button">Wide</li>
+            </ul>
+        </div>
+        <div class="mt-3">
+            <ul class="nav">
+                <li class="btn btn-primary" (click)="runs('DotBall')" type="button">Dot ball</li>
+                <li class="btn btn-danger ml-1" (click)="runs('Wicket')" type="button">wicket</li>
+            </ul>
+        </div>
+        <div class="mt-3">
+            <ul class="nav">
+                <li class="btn btn-danger ml-5" (click)="runs('switch')" type="button">switch</li>
+            </ul>
+        </div>
+    </div>
+</div>

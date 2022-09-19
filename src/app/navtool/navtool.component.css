@@ -1,0 +1,23 @@
+.example-spacer {
+    flex: 1 1 auto;
+  } 
+
+.inputsize{
+      padding: 25px;
+      width: 60em;
+  }
+#logo{
+    color: whitesmoke;
+}
+#Search{
+    margin-right: 18em;
+}
+#vertical {
+  height: 500vh;
+  background-color: red;
+}
+
+#card {
+  border-radius: 30px;
+}
+ 

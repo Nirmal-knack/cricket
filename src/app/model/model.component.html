@@ -1,0 +1,23 @@
+    <div class="modal" tabindex="-1" id ="model" role="dialog" [ngStyle]="{'display':display}">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" style="margin-left:11em;">Batsman Name</h2>
+                    <button type="button" class="close btn-close-bg" aria-label="Close" (click)="onCloseHandled()"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body text-left">
+                    <div>
+                        <b>Striker</b> : <input type="text" [(ngModel)]="striker" class="striker">
+                    </div>
+                    <div class="mt-3">
+                        <b>Non Striker</b> : <input type="text" [(ngModel)]="nonStriker" class="striker">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"  id="modelSave" mat-raised-button (click)="save()">save</button>
+                    <button type="button" class="ml-2"   mat-raised-button (click)="onCloseHandled()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,23 @@
+.modal {
+  top: 40%;
+}
+
+.modal-lg {
+  max-width: 750px;
+  height: 600px !important;
+}
+
+.modal-header {
+  background-color: #337AB7;
+  padding: 16px 16px;
+  color: #FFF;
+  border-bottom: 2px dashed #337AB7;
+  text-align: center !important;
+}
+
+.modal-content {
+  height: 60%;
+  background-color: #BBD6EC;
+}
+.close {
+}
